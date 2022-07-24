@@ -1,0 +1,236 @@
+:root {
+  --main-color: #2196f3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Tahoma, sans-serif;
+}
+
+
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 350px;
+  width: 350px;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  display: none;
+}
+
+.game-over .text,
+.game-over .question {
+  flex-basis: 100%;
+}
+
+.game-over .text {
+  text-align: center;
+  font-size: 50px;
+  color: #ff3a87;
+  font-weight: bold;
+  margin: 45px 0 0;
+}
+
+.game-over .question {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 32px 0 25px;
+}
+
+.game-over .butt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over .butt .yes,
+.game-over .butt .no {
+  margin: 8px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.game-over .butt .yes {
+  background-color: var(--main-color);
+}
+
+.game-over .butt .no {
+  background-color: #ff3a87;
+}
+
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.name {
+  color: #fff;
+  background-color: var(--main-color);
+  font-weight: bold;
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+}
+
+.message {
+  background-color: #fff;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.message span {
+  font-weight: bold;
+  color: #009688
+}
+
+.message span::before {
+  content: '[ '
+}
+
+.message span::after {
+  content: ' ]'
+}
+
+.start {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #009688;
+  color: #fff;
+  width: fit-content;
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.the-word {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+  user-select: none;
+}
+
+.input {
+  margin: 15px 0;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.upcoming-words {
+  background-color: #fff;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.upcoming-words div {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  margin: 4px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.control span {
+  font-weight: bold;
+  color: #009688;
+}
+
+.Congrat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 350px;
+  width: 350px;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+}
+
+.Congrat div {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+/* Start Grid System */
+@media (min-width: 576px) {
+
+  /* Small Devices => Landscape Phones */
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  /* Medium Devices => Tablets */
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* Desktops */
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* Large Screens */
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* End Grid System */

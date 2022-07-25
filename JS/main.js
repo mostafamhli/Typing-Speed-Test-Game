@@ -37,8 +37,8 @@ const hardWords = [
 ];
 
 const lvls = {
-  Easy: 4,
-  Normal: 4,
+  Easy: 3,
+  Normal: 3,
   Hard: 3,
 };
 
@@ -80,7 +80,6 @@ input.onpaste = function () {
 
 startButton.onclick = function () {
   this.remove();
-  input.focus();
 };
 
 let saveChangesButton = document.querySelector(".saveChanges");
@@ -105,9 +104,11 @@ saveChangesButton.onclick = function () {
       break;
   }
   scoreTotal.innerHTML = words.length;
+  input.focus();
   generateWords();
 };
 document.querySelector(".closeButton").onclick = function () {
+  input.focus();
   generateWords();
 };
 
@@ -125,7 +126,14 @@ function generateWords() {
     div.appendChild(txt);
     upComingWords.appendChild(div);
   }
-  startPlaying();
+  console.log();
+  if (words.length === 9) {
+    setTimeout(() => {
+      startPlaying();
+    }, 2000);
+  } else {
+    startPlaying();
+  }
 }
 
 function startPlaying() {

@@ -149,7 +149,13 @@ function startPlaying() {
           generateWords();
         } else {
           let congrat = document.querySelector(".Congrat");
-          congrat.style.display = "flex";
+          congrat.style.display = "block";
+          document.querySelector(".Congrat .butt .yes").onclick = function () {
+            location.reload();
+          };
+          document.querySelector(".Congrat .butt .no").onclick = function () {
+            window.close();
+          };
         }
       } else {
         let gameOver = document.querySelector(".game-over");
